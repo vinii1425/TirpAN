@@ -10,7 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.model.Trip;
+import com.trips.models.Trip;
+
+
 
 
 
@@ -50,7 +52,7 @@ public class HomeControllers {
 		@GetMapping("/detalle")
 		public String mostrarDetalle(Model model) {
 			Trip trip = new Trip ();
-			trip.setNombre("Rapel en Volcatenango");
+			trip.setNomTrip("Rapel en Volcatenango");
 			trip.setDescripcion("Aventa rapel en un circuito conectado en las...");
 			trip.setFecha(new Date());
 			trip.setCosto(10.0);
@@ -66,31 +68,35 @@ public class HomeControllers {
 		    try {
 		        Trip trip1 = new Trip();
 		        trip1.setId(1);
-		        trip1.setNombre("Rapel en Volcatenango");
+		        trip1.setNomTrip("Rapel en Volcatenango");
 		        trip1.setDescripcion("Hacer rapel en los circuitos de Volcatenango");
 		        trip1.setFecha(sdf.parse("10-05-2022"));
 		        trip1.setCosto(5.0);
+		        trip1.setDestacado(1); 
 
 		        Trip trip2 = new Trip();
 		        trip2.setId(2);
-		        trip2.setNombre("Deslizador en El picnic");
+		        trip2.setNomTrip("Deslizador en El picnic");
 		        trip2.setDescripcion("Deslizarte en un divertido tobogan sobre la colina");
 		        trip2.setFecha(sdf.parse("10-05-2022"));
 		        trip2.setCosto(5.0);
+		        trip2.setDestacado(0); 
 
 		        Trip trip3 = new Trip();
 		        trip3.setId(3);
-		        trip3.setNombre("Comida y Flores");
+		        trip3.setNomTrip("Comida y Flores");
 		        trip3.setDescripcion("Disfrutar de un amplio jardin el cual podras comprar");
 		        trip3.setFecha(sdf.parse("10-05-2022"));
 		        trip3.setCosto(1.0);
+		        trip3.setDestacado(0); 
 
 		        Trip trip4 = new Trip();
 		        trip4.setId(4);
-		        trip4.setNombre("Caminatas");
+		        trip4.setNomTrip("Caminatas");
 		        trip4.setDescripcion("Disfruta hacer senderismo por las montañas chalatecas");
 		        trip4.setFecha(sdf.parse("01-02-2022"));
-		        trip3.setCosto(1.0);
+		        trip4.setCosto(1.0); 
+		        trip4.setDestacado(1); 
 
 		        lista.add(trip1);
 		        lista.add(trip2);
