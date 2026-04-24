@@ -9,7 +9,7 @@ public class Trip {
 	private String descripcion;
 	private double costo;
 	private int calificacion;
-	private String imagen;
+	private String imagen = "no-image.png";
 	private String detalles;
 	private boolean activo;
 	private Date fecha;
