@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Categoría</title>
+</head>
+<body>
+
+    <h2>Formulario de Categoría</h2>
+
+    <form th:action="@{/categorias/save}" method="post">
+
+        <label>Nombre de la Categoría:</label><br>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Descripción:</label><br>
+        <input type="text" name="descripcion"><br><br>
+
+        <input type="submit" value="Guardar">
+
+    </form>
+
+</body>
+</html>
