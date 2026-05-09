@@ -12,8 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.trips.models.Trip;
-import com.trips.services.ITripServices;
 
+import com.trips.services.ITripServices;
+import com.trips.services.IRolService;
 
 
 
@@ -25,7 +26,8 @@ public class HomeControllers {
 	@Autowired
 	private ITripServices tripServices;
 	
-	
+	@Autowired
+	private IRolService rolService;
 	
 	@GetMapping("/")
 	public String mostrarHome (Model model) {
